@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class Teleporter : MonoBehaviour
 {
     public string levelName;
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.name.Contains("Mouse"))
+        if (collision.name.Contains("Mouse"))
         {
 
-        SceneManager.LoadScene(levelName);
+            SceneManager.LoadScene(levelName);
         }
     }
 }

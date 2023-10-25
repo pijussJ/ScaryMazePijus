@@ -7,7 +7,7 @@ public class Mouse : MonoBehaviour
     
     public void Update()
     {
-
+        // mouse movement
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
 
