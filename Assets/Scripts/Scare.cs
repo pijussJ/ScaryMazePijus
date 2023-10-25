@@ -8,15 +8,15 @@ public class Scare : MonoBehaviour
     public string StartingScene = "Menu";
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        void Restart() // restart
+        {
+            SceneManager.LoadScene(StartingScene);
+        }
         if (collision.gameObject.name.Contains("Mouse"))
         {
             jumpScare.SetActive(true);
             scareSound.Play();
             Invoke("Restart", 2f); // Restarts the game after 2 seconds
-        }
-        void Restart() // restart
-        {
-            SceneManager.LoadScene(StartingScene);
         }
     }
 }
